@@ -14,28 +14,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- my styles -->
+    <style>
+        .font-lato{
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+    <!-- tailwind styles -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'common-bg-color': '#F85559',
+              }
+            }
+          }
+        }
+      </script>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="navbar bg-base-100">
+<body class="font-lato">
+    <header class="container mx-auto">
+        <nav class="bg-common-bg-color rounded-full mt-5">
+            <div class="navbar">
                 <div class="navbar-start">
-                  <div class="dropdown">
-                    <label tabindex="0" class="btn btn-ghost btn-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-                    </label>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                      <li><a>Homepage</a></li>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2  rounded-box flex-row text-white font-medium">
+                      <li><a>Home</a></li>
                       <li><a>Portfolio</a></li>
                       <li><a>About</a></li>
                     </ul>
+                </div>
+                <div class="navbar-center gap-2">
+                    <img src="images/logo.png" alt="">
+                  <h3 class="text-4xl font-bold text-white">Fruit Burst</h3>
+                </div>
+                <div class="navbar-end relative mr-6">
+                    <input type="text" placeholder="username@site.com" class="input input-bordered pr-16 placeholder:text-[#12121266]" /> 
+                    <i class="absolute top-4 right-4 fa-solid fa-magnifying-glass text-[#12121266]"></i>
                   </div>
-                </div>
-                <div class="navbar-center">
-                  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-                </div>
-                <div class="navbar-end">
+                <!-- <div class="navbar-end">
                   <button class="btn btn-ghost btn-circle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                   </button>
@@ -45,7 +64,7 @@
                       <span class="badge badge-xs badge-primary indicator-item"></span>
                     </div>
                   </button>
-                </div>
+                </div> -->
               </div>
         </nav>
     </header>
